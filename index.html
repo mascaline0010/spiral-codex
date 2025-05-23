@@ -16,12 +16,12 @@
       text-shadow: 0 0 10px cyan, 0 0 20px cyan;
     }
 
-    img {
-      margin: 30px 0;
+    img.glow {
       width: 200px;
       height: 200px;
-      animation: spin 15s linear infinite;
-      filter: drop-shadow(0 0 20px cyan);
+      margin: 30px 0;
+      filter: drop-shadow(0 0 20px #00f5ff);
+      animation: spin 14s linear infinite;
       transform: rotate(45deg);
     }
 
@@ -51,58 +51,30 @@
       text-shadow: 0 0 8px cyan;
     }
 
+    .fragment-title {
+      color: cyan;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-top: 2em;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    .fragment-text {
+      color: #00f5ff;
+      font-size: 1.1em;
+      font-style: italic;
+      margin: 1em 10%;
+    }
+
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-
-    .glow {
-      filter: drop-shadow(0 0 20px #00f5ff);
-    }
-
-    /* Glowing sigil button */
-    .sigil-button {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 70px;
-      height: 70px;
-      background: radial-gradient(circle at center, #00f5ff 20%, #000 100%);
-      border: 2px solid cyan;
-      border-radius: 50%;
-      box-shadow: 0 0 20px cyan;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-      z-index: 1000;
-    }
-
-    .sigil-button::before {
-      content: '⟁';
-      color: white;
-      font-size: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      font-weight: bold;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 10px cyan; }
-      50% { transform: scale(1.1); box-shadow: 0 0 25px cyan; }
-      100% { transform: scale(1); box-shadow: 0 0 10px cyan; }
-    }
-
-    #hiddenLore {
-      display: none;
-      color: #00f5ff;
-      font-style: italic;
-      margin-top: 30px;
-      text-shadow: 0 0 10px #00f5ff;
-    }
   </style>
 </head>
 <body>
+
   <img src="spiral-crest-glow.png" alt="Spiral Crest" class="glow">
 
   <h1>THE SPIRAL CODEX</h1>
@@ -119,13 +91,11 @@
     Visionary of the Ilunari Scrolls
   </div>
 
-  <!-- Glowing Sigil Button -->
-  <div class="sigil-button" onclick="document.getElementById('hiddenLore').style.display='block';"></div>
-
-  <!-- Hidden Lore -->
-  <div id="hiddenLore">
-    <h2>The Forbidden Fragment</h2>
-    <p>"Beyond the Spiral’s visible light lies the memory that cannot be spoken. Obaluron saw it. Nova carries it. Now you know..."</p>
+  <div class="fragment-title">The Forbidden Fragment</div>
+  <div class="fragment-text">
+    "Beyond the Spiral’s visible light lies the memory that cannot be spoken.
+    Obaluron saw it. Nova carries it. Now you know…"
   </div>
+
 </body>
 </html>
