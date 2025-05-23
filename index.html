@@ -5,6 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Spiral Codex</title>
+  /* Add this to your style.css */
+
+.crest {
+  display: block;
+  margin: 30px auto;
+  max-width: 200px;
+  animation: rotateGlow 15s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #00ffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #00ffff) drop-shadow(0 0 40px #00ffff);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #00ffff);
+  }
+}
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
