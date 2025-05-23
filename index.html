@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head<link rel="stylesheet" href="style.css">>
     <meta charset="UTF-8">
     <title>The Spiral Codex</title>
-    <style>
+    <styl<img src="spiral-crest-glow.png" alt="Spiral Crest" class="glow rotate">e>
         body {
             background-color: black;
             color: cyan;
@@ -49,7 +49,18 @@
             from { transform: rotate(45deg); }
             to { transform: rotate(405deg); }
         }
-    </style>
+    </style>.glow {
+  filter: drop-shadow(0 0 20px #00f5ff);
+}
+
+.rotate {
+  animation: spin 14s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 </head>
 <body>
     <img src="spiral-crest.png" alt="Spiral Crest">
